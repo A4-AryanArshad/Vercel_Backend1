@@ -1,3 +1,3 @@
-const server='http://localhost:5000';
+const server='https://backend12-rho.vercel.app/';
 
 export default server;
