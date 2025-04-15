@@ -1,0 +1,289 @@
+.contacts {
+    padding-bottom: 50px;
+    display: flex;
+   
+    gap: 10px;
+    color: black;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    margin-left: 5px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .blurred {
+    filter: blur(5px);
+    pointer-events: none;
+  }
+  
+  .main-content {
+    transition: filter 0.3s ease;
+  }
+  
+
+.contacts .box {
+    margin-top: 80px;
+    border: 2px solid black;
+    width: 600px;
+    padding: 30px 20px;
+    height: 1200px;
+    border-radius: 20px;
+   
+    position: relative;
+}
+
+.contacts .box.b1 {
+    background-color: black;
+    color: white;
+}
+
+.contacts .box.b2 {
+    background-color: white;
+    color: black;
+
+   
+    
+}
+
+/* Styling for input fields and labels */
+.contacts .box.b1 label {
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    width: 80%;
+    margin-right: auto;
+}
+
+.contacts .box.b1 label {
+    color: white;
+    padding-left: 50px;
+}
+
+.contacts .box.b2 label {
+    color: black;
+
+}
+
+/* Input fields */
+.contacts .box.b1 input[type="text"],
+.contacts .box.b1 input[type="textarea"],
+.contacts .box.b1 input[type="number"],
+.contacts .box.b1 input[type="date"],
+.contacts .box.b1 select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacts .box input[type="text"],
+.contacts .box input[type="textarea"],
+.contacts .box input[type="number"],
+.contacts .box input[type="date"],
+.contacts .box select {
+    width: 80%; /* Use the same width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.nft-details label {
+    margin-top: 50px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.nft-details input[type="text"],
+.nft-details input[type="textarea"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #eaeaea; /* Light background for disabled inputs */
+    color: #333;
+    cursor: not-allowed; /* Change cursor for disabled fields */
+    box-sizing: border-box;
+}
+
+
+.contacts .box input[type="textarea"] {
+    height: 100px;
+}
+
+/* Disabled input styling */
+.contacts .box.b2 input[disabled] {
+    background-color: #f0f0f0;
+    color: #000;
+    cursor: not-allowed;
+}
+
+/* Image Preview Styling */
+.nft-preview {
+    width: 30%; /* Adjust the percentage for responsiveness */
+    max-width: 300px; /* Restrict the image's maximum width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block;
+    margin: 30px auto; /* Center the image horizontally */
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+/* Button Styling */
+.contacts .box .btn {
+    margin-top: 60px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+.contacts .box .btn:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+
+
+/* Button Styling */
+.contacts .box .btnn {
+    margin-top: 2px;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: initial;
+    font-weight: bold;
+
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  
+    width: 100%; /* Adjust this value to increase the width */
+    max-width: 500px; /* Optional: Set a maximum width */
+    display: block; /* Ensures it's treated as a block element */
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contacts .box {
+        width: 90%;
+        height: auto;
+    }
+
+    .contacts .box input[type="text"],
+    .contacts .box input[type="textarea"] {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts .box {
+        width: 100%;
+    }
+
+    .contacts .box label {
+        padding-left: 20px;
+    }
+
+    .contacts .box input[type="text"],
+    .contacts .box input[type="textarea"] {
+        width: 95%;
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Box Animation */
+.box {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.box.animate {
+    opacity: 1;
+}
+
+/* Animation Classes */
+.slide-in-left {
+    animation: slideInLeft 0.7s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.7s forwards;
+}

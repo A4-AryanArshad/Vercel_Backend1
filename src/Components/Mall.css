@@ -1,0 +1,59 @@
+/* Basic styles for the container */
+.unity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: black; /* Optional: Set a background color */
+    color: white;
+    text-align: center;
+  }
+  
+  .unity-container h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  /* Unity WebGL content */
+  .unity-content {
+    width: 100%;  /* Make sure it fills the width */
+    height: 100%; /* Make sure it fills the height */
+    max-width: 100%; /* Ensure it doesn't exceed the screen size */
+    max-height: 100vh; /* Limit height to the viewport height */
+    background-color: black; /* Optional: Set background color for Unity content */
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* For tablets and mobile devices */
+  @media (max-width: 1024px) {
+    .unity-content {
+      width: 100%;
+      height: 80vh; /* Adjust height on smaller devices */
+    }
+  }
+  
+  /* For small mobile devices */
+  @media (max-width: 480px) {
+    .unity-content {
+      width: 100%;
+      height: 70vh; /* Further adjustment for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .unity-container h1 {
+      font-size: 1.5rem; /* Smaller font for smaller screens */
+    }
+  }
+  

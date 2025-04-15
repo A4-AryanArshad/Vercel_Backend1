@@ -1,0 +1,184 @@
+/* Navbar container and positioning */
+.navbar {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+  position: relative;
+}
+
+/* Logo styling */
+.nav-logo {
+  color: whitesmoke;
+  margin-left: 20px;
+  cursor: pointer;
+  margin-top: -12px;
+  text-decoration: none;
+  font-size: 1.8rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Navbar menu styling */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  height: 90%;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item {
+  line-height: 30px;
+  margin-right: 0.8rem;
+}
+
+/* Hover effect for navbar items */
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: white;
+}
+
+.nav-item .active {
+  color: green;
+  border: 1px solid green;
+}
+
+/* Icon for mobile navbar */
+.nav-icon {
+  display: none;
+  color: #f5b921;
+}
+
+.nav-icon .icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-item {
+    line-height: 25px;
+    margin-right: 0.5rem;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%);
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #ffdd40;
+  }
+}
+
+/* Loader overlay to blur background */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  backdrop-filter: blur(8px); /* Apply blur effect to the background */
+  z-index: 9999; /* Ensure loader is above all other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Add a class to blur the page content when the loader is active */
+.body-blur {
+  filter: blur(8px);
+  pointer-events: none; /* Prevent interactions with blurred content */
+}
+
+/* Spinner styling */
+.vortex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

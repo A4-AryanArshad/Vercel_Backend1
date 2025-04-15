@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Heading Style */
+  .styled-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  }
+  .responsive-button {
+    width: 100%;
+    background-color: #0f0e0e; /* Gray background */
+    color: white; /* Black text */
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .responsive-button:hover {
+    background-color: #505050; /* Darker gray on hover */
+    transform: scale(1.05);
+  }
+
+  .responsive-button:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 768px) {
+    .responsive-button {
+      font-size: 14px;
+      padding: 12px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .responsive-button {
+      font-size: 12px;
+      padding: 10px 15px;
+    }
+  }
+  /* NFT Card Styles */
+  .nft-card {
+    background: linear-gradient(to bottom right, #fff, #f0f0f0);
+    color: #333;
+    border: 2px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nft-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px black /* Add a shadow effect */
+  }
+  
+  /* Image Styles */
+  .nft-card img {
+    object-fit: cover;
+    height: 200px;
+    border-bottom: 2px solid #000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  /* Text Styles */
+  .nft-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .card-subtitle {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .card-text {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.4;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+
+  .boxe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between items */
+    background-color: black;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .boxe .b {
+    background-color: #0f0e0e;
+    display: flex;
+    align-items: center; /* Vertically aligns content */
+    gap: 10%; /* Adjusts space between image and text dynamically */
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px; /* Rounds corners */
+    color: white;
+    flex-wrap: nowrap; /* Prevents items from wrapping to the next line */
+    overflow: hidden; /* Prevents content overflow */
+  }
+  /* Add this to your created.css or another relevant CSS file */
+
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for NFT cards in the .boxe section */
+.boxe .b {
+  animation: slideUp 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0; /* Initial state to hide before animation */
+}
+
+/* Add a delay to each NFT card for a staggered effect */
+.boxe .b:nth-child(1) {
+  animation-delay: 0.7s;
+}
+.boxe .b:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.boxe .b:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.boxe .b:nth-child(4) {
+  animation-delay: 1s;
+}
+
+
+.nft-link {
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.b {
+  position: relative;
+  border: 2px solid #ddd;
+  padding: 10px;
+ 
+}
+
+.b:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgb(248, 245, 245); /* Add a shadow effect */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.text-row {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.text-row span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Add more nth-child rules if you have more cards */
+
+  .boxe .b img {
+    margin-left: 60px;
+    width: 50px; /* Small image width */
+    height: 50px; /* Small image height */
+    object-fit: cover; /* Ensures proper fit */
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+  }
+  
+  .boxe .b .text-row {
+    display: flex;
+  
+    gap: 10%; /* Space between spans adjusts with screen size */
+    flex-direction: column; /* Default to column layout */
+    flex-grow: 1; /* Ensures the text section grows to fill space */
+    min-width: 0; /* Allows text to shrink without overflowing */
+  }
+  
+  .boxe .b .text-row span {
+    width: 160px;
+    display: inline-block;
+    font-size: 0.9rem;
+    color: white;
+    text-overflow: ellipsis; /* Adds ellipsis for long text */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow text */
+  }
+  
+  @media (min-width: 768px) {
+    .boxe .b {
+      gap: 12%; /* Increases gap for medium screens and above */
+    }
+  
+    .boxe .b .text-row {
+      flex-direction: row; /* Switch to row layout on larger screens */
+      gap: 10%; /* Adjusts spacing between spans */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .boxe .b {
+      gap: 5%; /* Reduces the gap for smaller screens */
+    }
+  
+    .boxe .b .text-row {
+      gap: 3%; /* Tighter spacing between spans */
+    }
+  
+    .boxe .b .text-row span {
+      font-size: 0.8rem; /* Reduces font size for smaller screens */
+    }
+  }
+  

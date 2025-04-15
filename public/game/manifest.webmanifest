@@ -1,0 +1,15 @@
+{
+    "name": "NFT Meta Mart",
+    "short_name": "NFT Meta Mart",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#1F1F20",
+    "theme_color": "#000",
+    "description": "NFT Meta Mart",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }

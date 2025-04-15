@@ -1,0 +1,164 @@
+/* Reset default body and html margin/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box;
+}
+
+/* Full-width background section */
+/* Keyframes for background animation */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for text animation */
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Full-width background section */
+.back {
+    margin-top: 40px;
+    width: 100vw;
+    height: 60vh;
+    max-height: 600px;
+    background-image: url('../aboutuspage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensures stacking context */
+    animation: slide-in-left 1s ease-in-out forwards; /* Apply background animation */
+}
+
+/* Main text styling */
+.text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    font-size: 4vw;
+    padding: 20px;
+    text-align: center;
+    max-width: 90%;
+    animation: slide-in-right 1s ease-in-out forwards; /* Apply text animation */
+}
+
+
+/* Container for boxes */
+.contain {
+    display: flex;
+    flex-wrap: wrap; /* Ensure the boxes wrap on smaller screens */
+    justify-content: center; /* Center the boxes */
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Box styling */
+.box {
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 330px; /* Set a fixed height for the boxes */
+    flex-grow: 1; /* Allow boxes to grow and take up available space */
+    background-color: #f0f0f0; /* Example background color for visibility */
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
+
+/* Default hidden state */
+.animate {
+  opacity: 0;
+  transform: translateX(100px); /* Adjust direction as needed */
+  transition: all 0.5s ease-in-out;
+}
+
+/* In-view state */
+.animate.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.b1 {
+    background-color: #121214;
+}
+
+.b2 {
+    background-color: #000000;
+}
+
+.b3 {
+    background-color: #121214;
+}
+
+/* Team section */
+.team {
+    padding-bottom: 50px;
+    margin-top: 70px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    color: white;
+}
+
+.diba {
+    text-align: center;
+    margin-top: 80px;
+    border: 2px solid white;
+    width: 350px;
+    padding-top: 30px;
+    height: 330px;
+    background-color: transparent;
+    border-radius: 20px;
+    color: white;
+}
+
+/* Animations */
+.animate {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.5s ease;
+}
+
+.animate-left {
+    transform: translateX(-100px);
+}
+
+.animate-right {
+    transform: translateX(100px);
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .box {
+        width: 100%; /* Make the boxes take full width on smaller screens */
+        max-width: 300px; /* Cap the width for smaller devices */
+    }
+}

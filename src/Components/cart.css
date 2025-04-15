@@ -1,0 +1,82 @@
+/* Empty Cart Container */
+.empty-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px; /* Adds space from the top */
+    padding: 20px;
+    background-color: white; /* Light gray background */
+    border: 2px solid #ddd; /* Subtle border */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Heading Style */
+  .empty-cart-container h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtext Style */
+  .empty-cart-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Button Style */
+  .continue-shopping-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: black; /* Blue button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .continue-shopping-button:hover {
+    background-color: white; /* Darker blue on hover */
+    color: black;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+
+  }
+  
+  .continue-shopping-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .empty-cart-container {
+      padding: 15px;
+    }
+  
+    .empty-cart-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .empty-cart-container p {
+      font-size: 0.9rem;
+    }
+  
+    .continue-shopping-button {
+      font-size: 0.9rem;
+      padding: 12px 20px;
+    }
+  }
+  

@@ -1,0 +1,231 @@
+.contacts {
+    padding-bottom: 50px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    color: black;
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+
+
+input:focus, textarea:focus {
+  border-color: initial;
+}
+.contacts .box {
+    margin-top: 80px;
+    border: 2px solid black;
+    width: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.contacts .box.b44 {
+    background-color: black;
+    color: white;
+    height: 750px;
+}
+
+.contacts .box.b55 {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    position: relative;
+}
+
+/* Wrapper for icon and text */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-top: 80px; /* Adjusted margin for better spacing */
+    margin-left: 20px; /* Align the group to the left */
+}
+
+.contact-item i {
+    margin-right: 15px; /* Space between icon and text */
+}
+
+/* Make the paragraphs responsive */
+.contact-item p,
+.contact-item a {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Styling for input fields */
+.contacts .box label {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.contacts .box input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.contacts .box input[type="email"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts .box .mess {
+  width: 80%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.contacts .box input[type="text"]:focus,
+.contacts .box input[type="textarea"]:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+/* Button Styling */
+.contacts .box .btn {
+    margin-top: 60px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contacts .box .btn:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .contact-item {
+        flex-direction: column; /* Stack icon above text on smaller screens */
+        align-items: flex-start; /* Align text to the left */
+    }
+
+    .contact-item i {
+        margin-bottom: 10px; /* Space below the icon */
+        margin-right: 0; /* Remove right margin for vertical layout */
+    }
+
+    .contacts .box {
+        width: 90%;
+        height: auto;
+    }
+
+    .contacts .box input[type="text"],
+    .contacts .box input[type="textarea"] {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .contacts .box label {
+        padding-left: 20px;
+    }
+
+    .contacts .box input[type="text"],
+    .contacts .box input[type="textarea"] {
+        width: 95%;
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .box {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.7s ease-in-out; /* Smooth transition */
+  }
+  
+  .box.animate {
+    opacity: 1; /* Show the box */
+  }
+  
+  .map {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.7s ease-in-out; /* Smooth transition */
+  }
+  
+  .map.animate {
+    opacity: 1; /* Show the map */
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.7s forwards; /* Trigger animation */
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.7s forwards; /* Trigger animation */
+  }
+  

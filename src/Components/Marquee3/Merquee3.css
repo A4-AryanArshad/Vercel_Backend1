@@ -1,0 +1,101 @@
+#cen{
+    background-color: #f2f2f2;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 80px;
+}
+#one{
+    font-size: 70px;
+}
+#two{
+    padding: 10px;
+    font-size: 30px;
+}
+#three{
+    font-size: 70px;
+}
+#wrap{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    text-align: center;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+}
+#wrap2{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+#cen1 h1{
+    font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+#cen1 p{
+
+color: black;
+font-family: "VT323", monospace;
+font-weight: 400;
+font-style: normal;
+font-size: 26px;
+padding: 10px;
+}
+#cen1 h3{
+    font-family: "VT323", monospace;
+font-weight: 400;
+font-style: normal;
+color: #dcbb48;
+font-size: 36px;
+}
+#totalflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#flexer{
+    width: 300px;
+    text-align: center;
+    margin: 30px;
+}
+#uiu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin: 30px;
+}
+#uy p{
+    width: 300px;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+#uy{
+    text-align: center;
+    margin: 20px;
+}
+
+
+
+@media screen and (max-width: 618px) {
+
+#uiu{
+    flex-direction: column;
+}
+
+
+}

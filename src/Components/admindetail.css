@@ -1,0 +1,209 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar and Footer */
+  nav, footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #000; /* Black background for navbar and footer */
+    color: #fff; /* White text */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Container styles */
+  #iy {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers content horizontally on smaller screens */
+    gap: 150px; /* Space between the boxes */
+    margin: 60px auto; /* Center the container */
+    max-width: 1200px; /* Restrict the width for large screens */
+    padding: 10px;
+    
+  }
+  
+  /* Left box (Image container) */
+  #loy {
+    flex: 1; /* Allows flexibility for responsiveness */
+    min-width: 300px; /* Minimum width to maintain layout */
+    max-width: 500px; /* Restrict the maximum width */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Black background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  #loy img {
+    width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Right box (Details container) */
+  #loy2 {
+    flex: 1; /* Allows flexibility for responsiveness */
+    min-width: 300px; /* Minimum width to maintain layout */
+    max-width: 500px; /* Restrict the maximum width */
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    
+  }
+  
+  /* Title and owner */
+  #loy2 h1 {
+    font-size: 24px;
+    color: #000; /* Bold black text */
+    font-weight: 700; /* Bold font */
+    margin-bottom: 10px;
+  }
+  
+  #loy2 p {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500; /* Slightly bold font */
+  }
+  
+  /* Card details */
+  #carder {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #carder #upperinfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #carder #upperinfo p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  #carder #innercarder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  #carder #innercarder h3 {
+    margin: 0;
+    color: #222;
+    font-weight: 700; /* Bold font */
+  }
+  
+  #carder #innercarder button {
+    padding: 10px 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600; /* Bold font */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  #carder #innercarder button:hover {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 2px solid #000; /* Add border */
+  }
+  
+  /* Support section */
+  #support {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  #support #sec {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #support h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 700; /* Bold font */
+  }
+  
+  #support p {
+    font-size: 14px;
+    color: #777;
+    font-style: italic; /* Italic font style */
+  }
+  
+  /* Description section */
+  #description {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #description h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 700; /* Bold font */
+  }
+  
+  #description p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Elegant font family */
+    font-weight: 500; /* Semi-bold font */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #iy {
+      flex-direction: column; /* Stack the boxes vertically */
+    }
+  
+    #loy, #loy2 {
+      max-width: 100%; /* Take full width */
+    }
+  
+    #description {
+      padding: 15px;
+    }
+  }
+  
